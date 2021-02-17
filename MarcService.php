@@ -11,7 +11,7 @@ if (!debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS)) {
             'display' => "Marc Demo PHP Windows Service",
             'description' => "How PHP scripts can be a Windows Service",
             'path' => PHP_PATH,
-            'params' => __DIR__.'\MarcService.php run',]);
+            'params' => __FILE__.' run',]);
     } else if ($argv[1] == 'start') {
         win32_start_service(SERVICE_NAME);
     } else if ($argv[1] == 'stop') {
